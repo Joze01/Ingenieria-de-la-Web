@@ -1,24 +1,23 @@
-# contact-test
+# contact list
 
-This is a contact list made with PHP for a Internish challenge
+Avance de proyecto
 
 ## How to run this?
 
-1. Install [XAMPP](https://www.apachefriends.org/index.html) or [MAMP](https://www.mamp.info/en/), if you don't have one of then yet;
+1. Instalar [XAMPP](https://www.apachefriends.org/index.html) o [MAMP](https://www.mamp.info/en/), 
 
 2. Clone my project to a local folder;
 
   ```sh
-  $ git clone https://github.com/rflpazini/contact-test.git
+  $ git clone https://github.com/Joze01/Ingenieria-de-la-Web.git
   ```
   
-3. Create a new date base called `contacts_db` and import the `db.sql` to it;
+3. Crear una base de datos `contacts_db` e importar el archivo sql `contact_db.sql`;
 
-4. Put all files of this repository into `htdocs`;
+4.  cargar los archivos en  `htdocs`;
 
 5. Have fun ;D
 
-Ps.: To login into the app, use this credentials: email-> `admin@admin.com` password -> `123`. In next commit I'll create a page to add new users to the platform. If you want to add a new one, just add it directly to db.
+Ps.: user admin
+password admin: 
 
-##License 
-[MIT License](http://rflpazini.mit-license.org) :copyright: Rafael Pazini
