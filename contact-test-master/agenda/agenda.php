@@ -86,10 +86,10 @@
 
 		function deleteContact(){
 			$.post(
-				"../config/delete_user.php",
+				"../config/delete_contact.php",
 				{idContact: $("#idContact").val()},
 				function(response){
-					window.location.href='../agenda/user.php';
+					window.location.href='../agenda/agenda.php';
 				});
 		}
 	</script>

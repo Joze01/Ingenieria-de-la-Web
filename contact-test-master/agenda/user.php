@@ -81,12 +81,12 @@
 			$("#idContact").val(e.id);
 		}
 
-		function deleteContact(){
+		function deleteUser(){
 			$.post(
-				"../config/delete_contact.php",
+				"../config/delete_user.php",
 				{idContact: $("#idContact").val()},
 				function(response){
-					window.location.href='../agenda/agenda.php';
+					window.location.href='../agenda/user.php';
 				});
 		}
 	</script>

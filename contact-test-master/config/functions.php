@@ -147,9 +147,8 @@ function deleteContact() {
 
 function deleteUser() {
 	include 'connect.php';
-
 	$id = $_POST['idContact'];
-	$sql = "DELETE FROM user WHERE id = '$id'";
+	$sql = "DELETE FROM user WHERE id = $id";
 	$query = mysqli_query($connect, $sql);
 }
 
