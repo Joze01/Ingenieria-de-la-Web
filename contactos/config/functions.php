@@ -153,6 +153,21 @@ function addUser() {
 	echo"<script>window.location.href='../agenda/user.php';</script>";
 }
 
+function addUser2() {
+	session_start();
+	$_SESSION['login'] =9999999;
+	$_SESSION['name'] = "Invitado";
+
+	include 'connect.php';
+	$owner = $_SESSION['login'];
+	$userLogin = $_POST['invitado'];
+	$userName = "invitado";
+	$password = "123";
+	$sql = "INSERT INTO user(userlogin, username, password) VALUES ('$userLogin', '$userName', '$password')";
+	$query = mysqli_query($connect, $sql);
+	echo"<script>window.location.href='../agenda/agenda.php';</script>";
+}
+
 function deleteContact() {
 	include 'connect.php';
 

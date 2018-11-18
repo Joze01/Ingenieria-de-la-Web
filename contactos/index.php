@@ -24,7 +24,7 @@
                 </div>
                 <button type="submit" value="Submit" class="btn btn-primary btn-lg btn-total">Entrar</button>
                 <label class="pull-right">
-                    <a href="#">Necesita ayuda?</a>
+                    <a href="config/addinvitado.php">Sin iniciar Sesision</a>
                 </label>
             </form>
         </div>
