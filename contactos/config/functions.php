@@ -50,7 +50,7 @@ function contactList(){
 						<th>Email</th>
 						<th>Phone</th>
 						<th>Address</th>
-						<th>Delete</th>
+						<th>Funciones</th>
 					</tr>
 				</thead>
 				<tbody>';
@@ -62,6 +62,7 @@ function contactList(){
 							<td> '.$res['phone'].'</td>
 							<td> '.$res['address'].'</td>
 							<td> <button type="button" id="'.$res['id'].'" class="btn btn-danger" data-toggle="modal" data-target="#modalDeleteContact" onclick="deleteContactModal(this)"><span aria-hidden="true"><i class="fa fa-times fa-fw"></button></td>
+							<td> <button type="button" id="'.$res['id'].'" class="btn btn-success" data-toggle="modal" data-target="#editmodal" onclick="editContactModal(this,\''.$res['name'].'\', \''.$res['email'].'\',\' '.$res['phone'].'\',\''.$res['address'].'\')"><span aria-hidden="true"><i class="fa fa-pencil fa-fw"></button></td>
 						</tr>';
 
 					}
@@ -106,7 +107,22 @@ function userList(){
 }
 
 
-function addContact() {
+function updateContact() {
+	include 'connect.php';
+
+	session_start();
+	$id = $_POST['idContact'];
+
+	$name = $_POST['name'];
+	$email = $_POST['email'];
+	$phone = $_POST['phone'];
+	$address = $_POST['address'];
+	$sql="UPDATE contacts SET name='".$name."', email='".$email."', address='".$address."', phone='".$phone."' WHERE id=".$id."";
+	$query = mysqli_query($connect, $sql);
+	echo"<script>window.location.href='../agenda/agenda.php';</script>";
+}
+
+	function addContact() {
 	include 'connect.php';
 
 	session_start();
